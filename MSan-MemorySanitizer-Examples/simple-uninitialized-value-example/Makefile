@@ -1,4 +1,5 @@
 # Show error using the Memory Sanitizer
+# Note: MSan does not work on Mac OS
 target:
 	clang++ -fsanitize=memory -fsanitize-memory-track-origins=2 -fno-omit-frame-pointer -O2 -g main.cpp -o main
 run: target
