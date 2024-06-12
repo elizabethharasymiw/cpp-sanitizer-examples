@@ -1,5 +1,5 @@
 /*
- * Written to show off how ThreadSanitizer displays data races it finds
+ * Written to show off how Memory Sanitizer displays uninitialized values
  */
 
 #include <stdio.h>
