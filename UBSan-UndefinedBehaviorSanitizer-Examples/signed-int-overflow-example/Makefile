@@ -1,6 +1,6 @@
 # Show error using fsanitize 
 target:
-	clang++ -fsanitize=undefined main.cpp -o main
+	clang++ -O3 -fsanitize=undefined main.cpp -o main
 run: target
 	./main
 
