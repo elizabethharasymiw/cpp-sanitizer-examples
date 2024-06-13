@@ -2,8 +2,13 @@
  * Written to show off the undefined behavior of signed int overflow.
  * Different C++ compilers will handle this undefined behavior differently.
  * 
- * For example nop2 is -1073741824 on x86-64 clang 15.0.0
- * But on x86-64 gcc 8.5 the result is 1073741824
+ * Weird behavior from this undefined behavior:
+ * For some reason nop2 is -1073741824 on:
+ * Homebrew clang version 15.0.7
+ * Target: x86_64-apple-darwin22.6.0
+ * This is mainly weird since most other major compiler version will convert
+ * the 4 nop function to a simple mov eax, edi but for some reason this is not
+ * the case for nop2 on the plateform and version above.
  */
 
 #include <iostream>
