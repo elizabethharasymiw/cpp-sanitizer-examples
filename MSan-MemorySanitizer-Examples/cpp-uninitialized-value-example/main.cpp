@@ -2,14 +2,10 @@
  * Written to show off how Memory Sanitizer displays uninitialized values
  */
 
-#include <stdio.h>
+#include <iostream>
 
-int main(int argc, char** argv){
-  int* a = new int[10];
-  a[5] = 0;
-  volatile int b = a[argc];
-  if(b){
-    printf("xx\n");
-  }
+int main(){
+  int i;
+  std::cout << i << std::endl;
   return 0;
 }
