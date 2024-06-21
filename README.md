@@ -1,28 +1,35 @@
-# C/C++ Sanitizer Examples
-C/C++ code examples that show how to use sanitizer tools.
-
-## ASan == AddressSanitizer
+# Sanitizers used in these examples
+### ASan == AddressSanitizer
 ```
 clang++ -fsanitize=address main.cpp -o main
 ```
-## LSan == LeakSanitizer
+
+
+### LSan == LeakSanitizer
 ```
 clang++ -fsanitize=leak main.cpp -o main
 ```
-## MSan == MemorySanitizer
+
+
+### MSan == MemorySanitizer
 ```
 clang++ -fsanitize=memory main.cpp -o main
 ```
-## UTSan == ThreadSanitizer
+
+
+### UTSan == ThreadSanitizer
 ```
 clang++ -fsanitize=thread main.cpp -o main
 ```
-## UBSan == UndefinedBehaviorSanitizer
+
+
+### UBSan == UndefinedBehaviorSanitizer
 ```
 clang++ -fsanitize=undefined main.cpp -o main
 ```
 
-## Useful flags when using sanitizer tools
+
+## Useful flags when using these sanitizer tools
 ```
 # Generate complete debug info
 -g
