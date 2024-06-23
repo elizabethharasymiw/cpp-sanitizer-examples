@@ -1,4 +1,4 @@
-# Sanitizer Examples
+# C++ Sanitizer Examples
 C/C++ code examples that show how to use sanitizer tools
 
 ## How to use
