@@ -45,7 +45,7 @@ clang -fsanitize=memory main.c -o main
 ```
 
 
-### UTSan == ThreadSanitizer
+### TSan == ThreadSanitizer
 ```
 echo C++ clang build example
 clang++ -fsanitize=thread main.cpp -o main
