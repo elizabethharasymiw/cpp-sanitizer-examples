@@ -1,5 +1,5 @@
 # C++ Sanitizer Examples
-C++ and C project examples that show how to use sanitizer tools
+C and C++ project examples that show how to use sanitizer tools
 
 ## How to use
 - Note: These are meant to be examples of showing compiler behavior using sanitizer tools
