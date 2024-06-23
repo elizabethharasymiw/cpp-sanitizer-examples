@@ -1,4 +1,17 @@
-# Sanitizers used in these examples
+# Sanitizer Examples
+C/C++ code examples that show how to use sanitizer tools
+
+## How to use
+- Note: These are meant to be examples of showing compiler behavior using sanitizer tools
+- Note: Build System requires GNU Make
+- Note: No Windows Examples yet
+- Examples are sorted by: ``` SanitizerToolName/ExampleName ```
+- Build Example: ``` make ```
+- Run Example: ``` make run ```
+- Build without sanitizer: ``` make nosanbuild ```
+- Run without sanitizer: ``` make nosanrun ```
+
+# Sanitizers used in this project and example calls
 ### ASan == AddressSanitizer
 ```
 echo C++ clang build example
