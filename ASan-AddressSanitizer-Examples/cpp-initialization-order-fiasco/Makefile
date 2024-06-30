@@ -7,24 +7,38 @@
 # different source files run is unspecified
 
 help:
-	# build1:  Build with main file passed to compiler first
-	# build2:  Build with main file passed to compiler second
-	# run1:  Run build1
-	# run2:  Run build2
-	# buildsan1:  Build example build1 with ASan
-	# buildsan2:  Build example build2 with ASan
+	# buildgcc1:  GCC build with main file passed to compiler first
+	# buildgcc2:  GCC build with main file passed to compiler second
+	# rungcc1:  Run buildgcc1
+	# rungcc2:  Run buildgcc2
+	# buildclang1:  Clang build with main file passed to compiler first
+	# buildclang2:  Clang build with main file passed to compiler second
+	# runclang1:  Run buildclang1
+	# runclang2:  Run buildclang2
+	# buildsan1:  Build example buildclang1 with ASan
+	# buildsan2:  Build example buildclang2 with ASan
 	# runsan1:  Run buildsan1
 	# runsan2:  Run buildsan2
 	# clean:  cleanup old builds from working directory
 
-build1:
-	clang++ main.cpp filetwo.cpp -o main
-run1: build1
+buildgcc1:
+	g++ main.cpp filetwo.cpp -o main
+rungcc1: buildgcc1
 	./main
 
-build2:
+buildgcc2:
+	g++ filetwo.cpp main.cpp -o main
+rungcc2: buildgcc2
+	./main
+
+buildclang1:
+	clang++ main.cpp filetwo.cpp -o main
+runclang1: buildclang1
+	./main
+
+buildclang2:
 	clang++ filetwo.cpp main.cpp -o main
-run2: build2
+runclang2: buildclang2
 	./main
 
 buildsan1:
