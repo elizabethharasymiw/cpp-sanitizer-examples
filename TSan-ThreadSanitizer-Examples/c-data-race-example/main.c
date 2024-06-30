@@ -12,9 +12,11 @@ void *Thread1(void *x){
 }
 
 int main(){
-  pthread_t t;
-  pthread_create(&t, NULL, Thread1, NULL);
-  Global = 43;
-  pthread_join(t, NULL);
+  for(int i = 0; i < 100; i++){
+    pthread_t t;
+    pthread_create(&t, NULL, Thread1, NULL);
+    Global = 43;
+    pthread_join(t, NULL);
+  }
   return Global;
 }
